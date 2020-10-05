@@ -8,4 +8,4 @@ The simplest possible example that uses Android
 Screenshot
 
 
-![screenshot](./README.md)
+![screenshot](screenshot.png)
