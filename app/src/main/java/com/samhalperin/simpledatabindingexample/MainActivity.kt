@@ -1,17 +1,10 @@
 package com.samhalperin.simpledatabindingexample
 
-import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 
-class MainActivity : AppCompatActivity() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-
-}
+/**
+ * The main activity for this project is empty since this is a
+ * 'single activity application' using the navigation component.
+ * See res/navigation/nav_graph.xml.
+ */
+class MainActivity : AppCompatActivity(R.layout.activity_main) {}

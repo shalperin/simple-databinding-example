@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
+        <!--    We are going to pass the entire viewmodel into this template, via databinding.-->
         <variable name="viewModel" type="com.samhalperin.simpledatabindingexample.DemoViewModel"/>
     </data>
 
-    <FrameLayout
+    <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".DemoFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".DemoFragment">
+        android:orientation="vertical"
+        android:gravity="center">
 
+        <!--
+            For android:text below, we use a value directly from the view model,
+            with android:text = "@{viewModel.msg}"
+        -->
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text="@{viewModel.msg}"
             android:textSize="44dp"
             android:id="@+id/my_textview"
             android:gravity="center"
+            tools:text = "888"
             />
 
-    </FrameLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RESET COUNTER"
+            android:onClick='@{() -> viewModel.resetCounter("hello databiding")}' />
+
+
+    </LinearLayout>
+
 
 </layout>
 
